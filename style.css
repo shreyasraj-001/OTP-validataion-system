@@ -18,6 +18,7 @@ body{
    
 }
 
+<<<<<<< HEAD
 .container{
     background-color: aliceblue;
     width: 60vh;
@@ -25,6 +26,27 @@ body{
     padding: 1em;
     border-radius: 8px;
     /* text-align: center; */
+=======
+
+
+.container{
+    padding: 1em;
+    border-radius: 8px;
+    /* text-align: center; */
+    width: 440px;
+        height: 300px;
+        border: 2px solid var(--fade);
+        background-color: #dee1ec;
+        border-radius: 8px;
+        padding: 14px;
+        overflow-y: scroll;
+        border-radius: 18px;
+        overflow: hidden; 
+
+        /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
+
+        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+>>>>>>> df44aa4f9366def1b0a887c2f165a90a65da1730
 }
 h2{
     margin-left: 0;
@@ -52,6 +74,7 @@ h2{
 button{
     width: 100%;
     height: 1.5em;
+<<<<<<< HEAD
     cursor: pointer;
     font-size: 16px;
     border-radius: 20px;
@@ -66,6 +89,63 @@ button{
     background-color: aliceblue;
     width: 60vh;
     height: 48vh;
+=======
+    margin-top: 2em;
+    /* New button css code */
+    appearance: none;
+    background-color: #042cc0;
+    border: 1px solid #0c15c0;
+    border-radius: 24px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    /* margin: ; */
+    min-height: 2.4em;
+    min-width: 0;
+    outline: none;
+    /* padding: 14px 24px; */
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+    will-change: transform;
+}
+
+button:disabled {
+  opacity: 0.6;
+  pointer-events:none ;
+  user-select: none;
+}
+
+button:hover{
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.container.step1{
+    background-color: aliceblue;
+    height: 250px;
+    padding: 1em;
+    border-radius: 8px;
+}
+
+.container.step2{
+    background-color: aliceblue;
+    width: 60vh;
+    height: 400px;
+>>>>>>> df44aa4f9366def1b0a887c2f165a90a65da1730
     padding: 1em;
     border-radius: 8px;
 }

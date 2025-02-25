@@ -33,6 +33,7 @@ const generateOTP=() =>{
     //oString(); // Generates a 6-digit OTP
 };
 
+<<<<<<< HEAD
 inputs.forEach((input)=>{
     input.addEventListener("keyup",function(e){
         if (this.value.length>=1) {
@@ -57,6 +58,65 @@ const serviceID = "service_u4vji6";
 const templateID = "template_pfpzx8m";
 nextButton.addEventListener("click", ()=>{
     OTP=generateOTP();
+=======
+// inputs.forEach((input)=>{
+//     input.addEventListener("keyup",function(e){
+//         if (this.value.length>=1) {
+//             e.target.value=e.target.value.substr(0,1);
+//         }
+//         if (inputs[0].value != "" &&
+//             inputs[1].value != "" &&
+//             inputs[2].value != "" &&
+//             inputs[3].value != "" 
+//         ) {
+//             verifyButton.classList.remove("disable")
+//         }else{
+//         verifyButton.classList.add("disable")
+//         }
+//     })
+// })
+
+
+inputs.forEach((input, index) => {
+    input.addEventListener("input", (e) => {
+        // Ensure only one digit is entered
+        e.target.value = e.target.value.slice(0, 1);
+
+        // Move to next input if a digit is entered
+        if (e.target.value !== "" && index < inputs.length - 1) {
+            inputs[index + 1].focus();
+        }
+        checkInputs();
+    });
+
+    input.addEventListener("keydown", (e) => {
+        // Move to previous input on Backspace if empty
+        if (e.key === "Backspace" && e.target.value === "" && index > 0) {
+            inputs[index - 1].focus();
+        }
+    
+    });
+
+});
+
+function checkInputs() {
+    const allFilled = [...inputs].every(input => input.value.length === 1);
+    if (allFilled) {
+        verifyButton.classList.remove("disable");
+    } else {
+        verifyButton.classList.add("disable");
+    }
+}
+
+
+// const serviceID = "service_u4vji6";
+const serviceID = "service_u4vji6i";
+const templateID = "template_pfpzx8m";
+nextButton.addEventListener("click", ()=>{
+    OTP=generateOTP();
+    
+console.log(OTP);
+>>>>>>> df44aa4f9366def1b0a887c2f165a90a65da1730
 nextButton.innerHTML="&#9889; Sending..."
     let templateParam={
         to_name: "",
